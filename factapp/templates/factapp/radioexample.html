@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="{{key}}">
+   <form action="" method="post">
+    {% csrf_token %}
+    <input type="radio" name="color" value="Red" {% if key == "Red" %} checked {% endif %} />Red <br>
+    <input type="radio" name="color" value="Green" {% if key == "Green" %} checked {% endif %}  />Green<br>
+    <input type="radio" name="color" value="Blue" {% if key == "Blue" %} checked {% endif %}  />Blue <br>
+    <input type="submit" name="btnsubmit" value="Click" />
+   </form> 
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <select name="basic">
+            <option value="">Select Courses</option>
+            <option value="C">C</option>
+            <option value="CPP">CPP</option>
+            <option value="DS">DS</option>
+            <option value="JAVA">JAVA</option>
+        </select>
+        <br>
+        <br>
+        <br>
+        <select name="advance" multiple>
+          
+            <option value="DS">Data Science</option>
+            <option value="ML">ML</option>
+            <option value="AI">AI</option>
+            <option value="DL">Deep Learning</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" name="btnsubmit" value="Click" />
+       </form> 
+       {{key}}
+</body>
+</html>

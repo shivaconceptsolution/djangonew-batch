@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="" method="post">
+    {% csrf_token %}
+    <input type="checkbox" name="courses" value="PYTHON" >PYTHON <br>
+    <input type="checkbox" name="courses" value="DJANGO"  />DJANGO <br>
+    <input type="checkbox" name="courses" value="FLASK"  />FLASK <br>
+    <input type="checkbox" name="courses" value="PYRAMID"  />PYRAMID <br>
+    <input type="submit" name="btnsubmit" value="Click" />
+   </form> 
+   {{key}}
+</body>
+</html>
