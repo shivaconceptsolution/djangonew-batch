@@ -183,3 +183,23 @@ def dropdownlistexample(request):
         return render(request,"factapp/dropdownlistexample.html",{"key":data})
     else:
         return render(request,"factapp/dropdownlistexample.html")
+
+def bindcheckbox(request):
+    data = ["C","C++","JAVA","DSA","PHP","RUBY","GO"]
+    if request.method=="POST":
+        result = ''
+        result1 = ''
+        chk = request.POST.getlist('chk')
+        ddl = request.POST.get('ddl')
+        rd =   request.POST.get('rd')
+        lst = request.POST.getlist('lst')
+        for d in chk:
+            result+=d+ " "
+        for d in lst:
+            result1+=d+ " "
+        result = "Check box data is "+result + " dropdown "+ddl + "radio button is " + rd + "Listbox data is "+result1
+        return render(request,"factapp/bindcheckbox.html",{"key":result,"course":data,"chkkey":chk,"ddlkey":ddl,"rdkey":rd,"lstkey":lst})
+
+
+    else:
+        return render(request,"factapp/bindcheckbox.html",{"course":data})

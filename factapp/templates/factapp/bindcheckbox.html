@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        {% for item in course %}
+            
+           <p><input type="checkbox" name="chk" value={{item}}  {% if item in chkkey %} checked {% endif %}/>{{item}} </p>
+        {% endfor %}
+
+        <select name="ddl">
+        {% for item in course %}
+        <option value={{item}} {% if item in ddlkey %} selected {% endif %} >{{item}} </option>
+         {% endfor %}
+        </select>
+        <br><br>
+        {% for item in course %}
+            
+        <p><input type="radio" name="rd" value={{item}}  {% if item == rdkey %} checked {% endif %}/>{{item}} </p>
+     {% endfor %}
+     <br><br>
+        <select name="lst" multiple>
+        {% for item in course %}
+        <option value={{item}} {% if item in lstkey %} selected {% endif %} >{{item}} </option>
+         {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" name="btnsubmit" />
+    </form>
+    {{key}}
+</body>
+</html>

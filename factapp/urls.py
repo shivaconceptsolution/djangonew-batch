@@ -9,5 +9,6 @@ urlpatterns=[
     path('message',views.message,name='message'),
     path('radioexample',views.radioexample,name='radioexample'),
     path('checkboxexample',views.checkboxexample,name='checkboxexample'),
-     path('dropdownlistexample',views.dropdownlistexample,name='dropdownlistexample')
+    path('dropdownlistexample',views.dropdownlistexample,name='dropdownlistexample'),
+    path('bindcheckbox',views.bindcheckbox,name='bindcheckbox')
 ]
