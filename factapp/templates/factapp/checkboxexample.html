@@ -8,10 +8,9 @@
 <body>
    <form action="" method="post">
     {% csrf_token %}
-    <input type="checkbox" name="courses" value="PYTHON" >PYTHON <br>
-    <input type="checkbox" name="courses" value="DJANGO"  />DJANGO <br>
-    <input type="checkbox" name="courses" value="FLASK"  />FLASK <br>
-    <input type="checkbox" name="courses" value="PYRAMID"  />PYRAMID <br>
+    {% for k,v in keycourse.items %}
+    <input type="checkbox" name="courses" value="{{k}}:{{v}}" >{{k}} <br>
+    {% endfor %}
     <input type="submit" name="btnsubmit" value="Click" />
    </form> 
    {{key}}

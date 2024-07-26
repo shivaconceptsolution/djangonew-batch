@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+       {% csrf_token %}
+       <select name="ddlcountry">
+        <option value="">Select Country</option>
+        {% for item in keycountry %}
+            <option value={{item}}>{{item}}</option>
+        {% endfor %}
+       </select>
+       <input type="submit" name="btnsubmit" value="Show State" />
+       <br/><br/>
+       {% if keystate  %}
+       <select name="ddlstate">
+         {% for item in keystate %}
+            <option value={{item}}>{{item}}</option>
+        {% endfor %}
+       </select>
+       {% endif %}
+
+    </form>
+</body>
+</html>

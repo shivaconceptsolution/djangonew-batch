@@ -163,15 +163,19 @@ def message(request):
         return render(request,"factapp/message.html",{"key":False})
 
 def checkboxexample(request):
+    courses= {"C":2200,"C++":3400,"DSA":5500,"JAVA":22500}
     if request.method=="POST":
         c = request.POST.getlist('courses')
         item=""
+        fee=0
         for data in c:
-            item+=data+" "
+            lst= data.split(':')
+            item+=lst[0]+" "
+            fee+=int(lst[1])
         
-        return render(request,"factapp/checkboxexample.html",{"key":item})
+        return render(request,"factapp/checkboxexample.html",{"keycourse":courses,"key":"coursename " + item + "fee "+str(fee)})
     else:
-        return render(request,"factapp/checkboxexample.html")
+        return render(request,"factapp/checkboxexample.html",{"keycourse":courses})
 def dropdownlistexample(request):
     if request.method=="POST":
         basic = request.POST.get('basic')
@@ -203,3 +207,23 @@ def bindcheckbox(request):
 
     else:
         return render(request,"factapp/bindcheckbox.html",{"course":data})
+
+def countrystate(request):
+    country = ["INDIA","USA","CHINA"]
+   
+    if request.method=="POST":
+        statedata=[]
+        indiastate = ["MP","UP","AP"]
+        usastate = ["NYC","WSD","MI"]
+        china = ["SANGHAI","BEEJING","TIBBAT"]
+        c = request.POST.get("ddlcountry")
+        if c=='INDIA':
+            statedata.extend(indiastate)
+        elif c=='USA':
+            statedata.extend(usastate)
+        else:
+            statedata.extend(china)
+        return render(request,"factapp/country.html",{"keycountry":country,"keystate":statedata})
+
+    else:
+        return render(request,"factapp/country.html",{"keycountry":country})

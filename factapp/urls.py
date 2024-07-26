@@ -10,5 +10,6 @@ urlpatterns=[
     path('radioexample',views.radioexample,name='radioexample'),
     path('checkboxexample',views.checkboxexample,name='checkboxexample'),
     path('dropdownlistexample',views.dropdownlistexample,name='dropdownlistexample'),
-    path('bindcheckbox',views.bindcheckbox,name='bindcheckbox')
+    path('bindcheckbox',views.bindcheckbox,name='bindcheckbox'),
+    path('countrystate',views.countrystate,name='countrystate')
 ]
