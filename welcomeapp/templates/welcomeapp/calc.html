@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="float:left;width:60%;">
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="num1" placeholder="Enter First Number" value="{{data1}}" />
+            <br/>
+            <input type="text" name="num2" placeholder="Enter Second Number" value="{{data2}}" />
+            <br/>
+            <input type="submit" name="btnsubmit1" value="+" />
+            <br>
+            <input type="submit" name="btnsubmit2" value="-" />
+            <br>
+            <input type="submit" name="btnsubmit3" value="*" />
+            <br>
+            <input type="submit" name="btnsubmit4" value="/" />
+            <br>
+            <input type="submit" name="btnsubmit5" value="AC" />
+        </form>
+    </div>
+    <div style="float:left;width:40%;">
+        {%  for item in key   %}
+         <p>  {{item}} </p> 
+        {% endfor %}
+    </div>
+    
+    
+</body>
+</html>
