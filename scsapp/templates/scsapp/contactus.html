@@ -1,47 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="/static/scsapp/style.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-    <header>
-        <div class="logo">
-            <img src="/static/scsapp/images/logo22.jpeg" />
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="/scsapp/">Home</a></li>
-                <li><a href="/scsapp/aboutus">About us</a></li>
-                <li><a href="/scsapp/services">Services</a></li>
-                <li><a href="/scsapp/gallery">Gallery</a></li>
-                <li><a href="/scsapp/contactus">Contact us</a></li>
-            </ul>
-        </div>
-    </header>
-    <section>
+{% extends 'scsapp/layout.html' %}
+{% block titleblock %}
+Welcome in Contact us Page
+{% endblock %}
+{% block middle %}
+<section>
         <div class="part1">
             <h1>Welcome in Contact us Page</h1>
         </div>
         <div class="part2">
 
         </div>
-    </section>
-    <footer>
-        <div class="fpart">
-
-        </div>
-        <div class="fpart">
-
-        </div>
-        <div class="fpart">
-
-        </div>
-    </footer>
-</body>
-
-</html>
+</section>
+{% endblock %}
+    

@@ -1,50 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="/static/scsapp/style.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-    <header>
-        <div class="logo">
-            <img src="/static/scsapp/images/logo22.jpeg" />
+{% extends 'scsapp/layout.html' %}
+{% block titleblock %}
+Welcome in Home Page
+{% endblock %}
+{% block middle %}
+    <section  class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Welcome in Home Page</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eaque, delectus nam molestias inventore explicabo eum cumque ducimus, obcaecati nobis rem asperiores eveniet. Consectetur iusto architecto fugit nemo qui maxime!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi expedita dolorum illum cum consequatur error perferendis aliquam illo voluptatibus quidem ullam temporibus, aut quibusdam accusamus voluptas laudantium, culpa et fugit!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia error maiores repellat, necessitatibus numquam consequuntur, est temporibus facilis nihil maxime nobis. Porro minima dolorum, repellendus quidem fugit reprehenderit molestias est.</p>
+            </div>
+            <div class="col-sm-6">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BDuo3NmvNDE?si=sBbRkyao_t5RV_YD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
-        <div class="menu">
-            <ul>
-                <li><a href="/scsapp/">Home</a></li>
-                <li><a href="/scsapp/aboutus">About us</a></li>
-                <li><a href="/scsapp/services">Services</a></li>
-                <li><a href="/scsapp/gallery">Gallery</a></li>
-                <li><a href="/scsapp/contactus">Contact us</a></li>
-            </ul>
-        </div>
-    </header>
-    <section>
-        <div class="part1">
-            <h1>Welcome in Home Page</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eaque, delectus nam molestias inventore explicabo eum cumque ducimus, obcaecati nobis rem asperiores eveniet. Consectetur iusto architecto fugit nemo qui maxime!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi expedita dolorum illum cum consequatur error perferendis aliquam illo voluptatibus quidem ullam temporibus, aut quibusdam accusamus voluptas laudantium, culpa et fugit!</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia error maiores repellat, necessitatibus numquam consequuntur, est temporibus facilis nihil maxime nobis. Porro minima dolorum, repellendus quidem fugit reprehenderit molestias est.</p>
-        </div>
-        <div class="part2">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/BDuo3NmvNDE?si=sBbRkyao_t5RV_YD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+       
     </section>
-    <footer>
-        <div class="fpart">
+{% endblock %}
 
-        </div>
-        <div class="fpart">
-
-        </div>
-        <div class="fpart">
-
-        </div>
-    </footer>
-</body>
-
-</html>

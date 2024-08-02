@@ -32,43 +32,14 @@ header ul li a{
 
 section
 {
-    height: 500px;
+    
     background-color: cadetblue;
 }
 
-.part1
-{
-      width:40%;
-      float:left;
-      height:100%;
-      border:1px solid red;
-}
-.part2
-{
-    width:59%;
-    float:left;
-    height:100%;
-    border:1px solid red;
 
-}
-.part1 p
-{
-    margin-top: 10px;
-    font-size: 18px;
-    text-align: left;
-}
 footer{
     height: 200px;
     background-color: #EEAF21;
 
 }
 
-.fpart
-{
-    float:left;
-    border:1px solid red;
-    width:30%;
-    height: 90%;
-    margin-left: 10px;
-    margin-top: 10px;;
-}
